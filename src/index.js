@@ -21,10 +21,14 @@ function imageCreator({ imageURL }){
   return image;
 }
 
+//iterate over the data and for each img, do the func from above
 imageData.forEach(img => {
-  let imgElement = imageCreator(img);
+  let imgElement = imageCreator(img); //will return an array with img src; thus we need to use appendChild
+
+  document.body.prepend(imgElement); //now it will be shown on page!
  });
 
+ 
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
