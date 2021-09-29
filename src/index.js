@@ -21,10 +21,15 @@ function imageCreator({ imageURL }){
   return image;
 }
 
+imageData.forEach(img => {
+  let imgElement = imageCreator(img);
+ });
+
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
 //  Destructure `open` and `close` from the constants
+
 
 
 // TASK 2- Verify our imports using log statements
