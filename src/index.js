@@ -7,6 +7,19 @@ const imageData = [
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
 ]
 
+function imageCreator({ imageURL }){
+  //step I: create element
+  let image = document.createElement('img');
+
+  //step II: Add content
+  image.src = imageURL; //this is called 'object destructuring'; used instead of dot notation! see how {imageURL} is grepped from above in function...
+
+  //step III: add styling
+  image.style.height = '10em'; //note that styling is optional here
+
+  //step IV: return element! We need to return element so it can be accessed outside this function!
+  return image;
+}
 
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
