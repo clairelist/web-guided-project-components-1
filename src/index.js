@@ -23,23 +23,30 @@ function imageCreator({ imageURL }){
 
 //iterate over the data and for each img, do the func from above
 imageData.forEach(img => {
-  let imgElement = imageCreator(img); //will return an array with img src; thus we need to use appendChild
+  let imgElement = imageCreator(img); //will return an array with img src; thus we need to use append/prependChild
 
-  document.body.prepend(imgElement); //now it will be shown on page!
+ // document.body.prepend(imgElement); //now it will be shown on page!
  });
 
- 
+
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
 //  Destructure `open` and `close` from the constants
 
+import panelData from './data/panelData.js'; 
+//we use the ./ to tell computer 'hey this is in the same dir!
 
+import constants from './data/constants.js';
+
+const {open, close} = constants;
+//same as const open = constants.open;
+//and const close = constants.close; hence destructuring!
 
 // TASK 2- Verify our imports using log statements
-console.log() // log the panelData
-console.log() // log the open arrow
-console.log() // log the close arrow
+//console.log(panelData); // log the panelData
+// console.log(open); // log the open arrow
+// console.log(close); // log the close arrow
 
 
 // TASK 3- Comment out the div.panel from index.html and grab its parent element.
